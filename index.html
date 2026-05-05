@@ -366,48 +366,53 @@
         </div>
       </div>
 
-      <form class="contact-form" action="mailto:wlpavingnb@gmail.com" method="post" enctype="text/plain">
-        <label>
-          Name
-          <input type="text" name="name" placeholder="Your name" />
-        </label>
+     <form class="contact-form" action="https://formspree.io/f/meengbpa" method="POST">
+  <label>
+    Name
+    <input type="text" name="name" placeholder="Your name" required />
+  </label>
 
-        <label>
-          Phone
-          <input type="tel" name="phone" placeholder="Your phone number" />
-        </label>
+  <label>
+    Phone
+    <input type="tel" name="phone" placeholder="Your phone number" required />
+  </label>
 
-        <label>
-          Email
-          <input type="email" name="email" placeholder="Your email address" />
-        </label>
+  <label>
+    Email
+    <input type="email" name="email" placeholder="Your email address" required />
+  </label>
 
-        <label>
-          Project Type
-          <select name="project_type">
-            <option>Driveway paving</option>
-            <option>Asphalt repair</option>
-            <option>Retaining wall</option>
-            <option>Site preparation</option>
-            <option>Construction support</option>
-            <option>Other</option>
-          </select>
-        </label>
+  <label>
+    Project Type
+    <select name="project_type" required>
+      <option value="">Please select a project type</option>
+      <option value="Driveway paving">Driveway paving</option>
+      <option value="Asphalt repair">Asphalt repair</option>
+      <option value="Retaining wall">Retaining wall</option>
+      <option value="Site preparation">Site preparation</option>
+      <option value="Construction support">Construction support</option>
+      <option value="Other">Other</option>
+    </select>
+  </label>
 
-        <label>
-          Message
-          <textarea name="message" rows="5" placeholder="Please describe your project."></textarea>
-        </label>
+  <label>
+    Project Location
+    <input type="text" name="project_location" placeholder="Street, city, or area" />
+  </label>
 
-        <button type="submit" class="btn btn-primary">Send Request</button>
+  <label>
+    Message
+    <textarea name="message" rows="5" placeholder="Please describe your project." required></textarea>
+  </label>
 
-        <p class="form-note">
-          Note: This simple form opens your email app. For a professional online form later,
-          you can connect Formspree, Netlify Forms, or a backend service.
-        </p>
-      </form>
-    </div>
-  </section>
+  <input type="hidden" name="_subject" value="New Free Estimate Request - W&L Paving" />
+
+  <button type="submit" class="btn btn-primary">Send Request</button>
+
+  <p class="form-note">
+    We will review your request and contact you as soon as possible.
+  </p>
+</form>
 
   <!-- Footer -->
   <footer class="footer">
